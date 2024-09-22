@@ -67,10 +67,10 @@ def compare_annotations(filename_predicted, filename_gt, verbose=0):
 	return points_positions, points_values,points_score
 
 # Change this on your machine pointing to your results (txt files)
-predictions_path_root = "./evaluare/fisiere_solutie/332_Rincu_Stefania/"
+predictions_path_root = "./data/evaluare/fisiere_solutie/332_Rincu_Stefania/"
 
 # Change this on your machine to point to the ground-truth test
-gt_path_root = "./evaluare/ground_truth_test/"
+gt_path_root = "./data/evaluare/ground_truth_test/"
 
 
 # Change this to 1 if you want to print results at each turn

@@ -3,21 +3,21 @@ import numpy as np
 import os
 
 # Path to the folder where solutions will be saved
-SOL_FOLDER_PATH = 'evaluare/fisiere_solutie/332_Rincu_Stefania'
+SOL_FOLDER_PATH = 'data/evaluare/fisiere_solutie/332_Rincu_Stefania'
 os.makedirs(SOL_FOLDER_PATH, exist_ok=True)
 
 # Path to the folder from where we will retrieve the moves and images for the program
 # Do not add a "/" at the end
-IMGS_FOLDER_PATH = 'testare'
+IMGS_FOLDER_PATH = 'data/testare'
 
 # Path to retrieve the templates for template matching
 # The templates have been loaded into the "templates" folder, which was provided with the assignment
 # Do not add a "/" at the end
-TEMPLATES_FOLDER_PATH = 'templates'
+TEMPLATES_FOLDER_PATH = 'data/templates'
 
 # Path to retrieve the auxiliary game board image
 # The auxiliary image has been loaded into the "aux_img" folder, which was provided with the assignment
-AUX_IMAGE_FOLDER_PATH = 'aux_img/empty_table.jpg'
+AUX_IMAGE_FOLDER_PATH = 'data/aux_img/empty_table.jpg'
 
 
 # Matrix that stores the score values on the edge of the game board
