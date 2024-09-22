@@ -28,7 +28,7 @@ The **auxiliary images** folder contains examples of game boards with different 
 ## File Names
 The files in the provided datasets are named as follows:
 
-- **game images**: named in the format `i_j.jpg`, where $i \in \{1, 2, 3, 4, 5\} $ represents the game number and $ j \in \{01, 02, \ldots, 20\} $ represents the move number.
+- **game images**: named in the format `i_j.jpg`, where $i \in \lbrace 1, 2, 3, 4, 5 \rbrace$ represents the game number and $j \in \lbrace 01, 02, \ldots, 20 \rbrace$ represents the move number.
 - **annotation files**: corresponding to each image, these files are named `i_j.txt`.
 - **player turn files**: these files are labeled `i_mutari.txt`, indicating the turns of the players throughout an entire game.
 
