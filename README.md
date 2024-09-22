@@ -117,11 +117,11 @@ Both the templates and the patches of the domino halves detected in a round unde
 For the **template matching** step, I used OpenCV’s `matchTemplate()` method to compare each region of the board where a domino is detected with the corresponding templates, identifying the numbers on each domino. I used **correlation** between a patch and a template as the matching metric with `cv.TM_CCOEFF_NORMED`. 
 
 ## Step 4 - calculate score
-To calculate the score, I maintained a list containing two sublists: one for Player 1's position on the score table and another for Player 2. 
+To calculate the score, I maintain a list (`players_positions`) containing two sublists: one tracking Player 1's position on the external scoring path and another for Player 2.
 
-At the end of each round, I pass to function `calculate_score` the list of player positions, the index of the current player, the coordinates of the newly added piece, and the numbers on that piece. I access values from a hardcoded matrix that contains bonus points (`table_points` variable defined at the beggining of the script) corresponding to the specified coordinates and sum them to calculate the received points. If a double piece is added, I multiply the score by 2. 
+At the end of each round, I call the `calculate_score` function, passing in the `players_positions` list, the index of the current player, the coordinates of the newly placed piece and the numbers recognized on it. The function retrieves bonus points from a predefined matrix(`table_points` hardcoded at the beginning of the script)  based on the coordinates of the placed piece and adds them to the total score. If a double piece is added, then the score is doubled.
 
-Next, I check if the current player's last position on the score map matches either of the two numbers on the piece. If so, I add 3 points. If the total points exceed 0, I simulate moving the token on the score table by advancing a "number of score boxes" and update the current player's position by adding the newly calculated position.
+Next, I check if the current player's last position on the external scoring path matches either of the two numbers on the domino tile. If so, I add 3 points. If the total points exceed 0, I simulate moving the player's token on the score table by advancing a "number of score boxes" and update the current player's position by adding those points.
 
 Additionally, for the opponent, I check if their last position on the score map corresponds to either of the two numbers on the current piece. If it does, I add 3 points by updating their position vector.
 
